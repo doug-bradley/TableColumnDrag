@@ -1,0 +1,32 @@
+<div>
+    <table style="width: 50%; margin-top: 50px;" class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+        <thead>
+            <tr dragula="table_columns" [dragulaModel]="columnData">
+                <th  class="col grabbable mdl-data-table__cell--non-numeric" *ngFor="let column of columnData">
+                    {{column}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableData">
+                <td class="mdl-data-table__cell--non-numeric">{{ item.number }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.description }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.postedDate }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.quantity}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.uom }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.unitPrice }}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.vat}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{ item.amount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- 
+number: number;
+description: string;
+postedDate: string;
+quantity: number;
+uom: string;
+unitPrice: number;
+vat: string;
+amount: number; -->
